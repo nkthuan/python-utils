@@ -1,8 +1,14 @@
+"""
+Description:
+Calculate the total duration of videos inside a specified directory (and its subdirectories).
+
+Author: nkthuan
+"""
+
 import argparse
 import os
 import sys
 from pymediainfo import MediaInfo
-
 
 VIDEO_EXTENSIONS = (
     ".mp4",
@@ -43,10 +49,12 @@ def convert_to_hours_minutes(total_minutes):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+        description="Calculate the total duration of videos inside a specified directory (and its subdirectories)."
+    )
     parser.add_argument(
         "inputDirectory",
-        help="Path of the directory to calculate total videos duration.",
+        help="Path of the directory to calculate total videos duration (all subdirectories considered).",
     )
     args = parser.parse_args()
     if not os.path.exists(args.inputDirectory):
