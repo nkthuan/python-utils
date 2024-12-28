@@ -11,7 +11,7 @@ def sanitized_error_messasge(error, api_key):
         error_message = str(error)
 
         # If developer provided an invalid api key, it's ok to show it back to him (it's useless anyway)
-        if "API key not valid" in error_message:
+        if "api key not valid" in error_message.lower():
             return f"Error:\n{error_message}"
 
         error_message = error_message.replace("\n", " ")

@@ -28,6 +28,7 @@ Instructions on the usage of the scripts:
 - Generally, just run each script with the option -h to learn about it.
 - Rename the file .env.sample to .env and put any necessary environment variables there.
 - Be careful about API quota usage.
+- There can be error message about relative imports when running a script. In that case, you need to run the script with python -m (check example below)
 
 ### Calculate videos duration
 
@@ -44,6 +45,10 @@ Recursively list all files with specified extension and created within a time fr
 ### YouTube playlist duration
 
 Calculate total duration of videos in a YouTube playlist.
+
+```bash
+python -m youtube.playlist_duration -h
+```
 
 ## License
 
