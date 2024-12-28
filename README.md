@@ -25,7 +25,9 @@ pip install -r requirements.txt
 
 Instructions on the usage of the scripts:
 
-Generally, just run each script with the option -h to learn about it.
+- Generally, just run each script with the option -h to learn about it.
+- Rename the file .env.sample to .env and put any necessary environment variables there.
+- Be careful about API quota usage.
 
 ### Calculate videos duration
 
@@ -38,6 +40,10 @@ python calculate_videos_duration.py -h
 ### List recent files
 
 Recursively list all files with specified extension and created within a time frame inside specified directory.
+
+### YouTube playlist duration
+
+Calculate total duration of videos in a YouTube playlist.
 
 ## License
 
