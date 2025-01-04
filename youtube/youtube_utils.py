@@ -79,4 +79,11 @@ def calculate_total_duration(durations):
 
     hours, remainder = divmod(int(total_duration_seconds), 3600)
     minutes, seconds = divmod(remainder, 60)
-    return f"{hours:02}:{minutes:02}:{seconds:02}"
+
+    result = f"{hours:02}:{minutes:02}:{seconds:02}"
+
+    if hours > 24:
+        days, hours = divmod(hours, 24)
+        result += f"\nOR\n{days:02}:{hours:02}:{minutes:02}:{seconds:02}"
+
+    return result

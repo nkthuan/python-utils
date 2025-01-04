@@ -41,7 +41,7 @@ def main_process(playlist_id, api_key):
     video_durations = fetch_video_durations_in_bulk(video_ids, api_key)
 
     total_duration = calculate_total_duration(video_durations)
-    print(f"\nTotal duration of playlist: {total_duration}")
+    print(f"\nTotal duration of playlist:\n{total_duration}")
 
 
 if __name__ == "__main__":
